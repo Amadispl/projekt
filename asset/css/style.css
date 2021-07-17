@@ -48,8 +48,8 @@ a{
     text-decoration: none;
     color: black;
 }
-.nav a:hover{
-    color: rgb(7, 102, 156);
+a:hover{
+    color: rgb(22, 103, 150);
 }
 
 .wf{
@@ -84,6 +84,19 @@ a{
 }
 .img:hover .bg {
     opacity: 1;
+}
+.img:hover img{
+    animation-name: imgscale;
+    animation-duration: 1s;
+    overflow:hidden ;
+}
+@keyframes imgscale
+{
+    100%{
+        transform:scale(1.2);
+        
+
+    }
 }
 .btf
 {
@@ -125,21 +138,19 @@ a{
 }
 @media (max-width: 768px) {
     .footer-col1{
-        width: 38%;
-        padding: 20px;
+        width: 20%;
     }
     .footer-col2{
-        width: 38%;
-        padding: 20px;
+        width: 40%;
     }
     .footer-col3{
-        width: 30%;
+        width: 15%;
     }
     .footer-col4{
-        width: 30%;
+        width: 15%;
     }
     .footer-col5{
-        width: 35%;
+        width: 15%;
     }
     .footer{
         padding: 35px 0px;
@@ -245,10 +256,9 @@ form{
 }
 
 .greywrap{
-    background-repeat: no-repeat;
-    background-color: transparent;
-    background-image: URL("asset/img/k.jpg");
-  
+    background-image: URL("../img/background.jpg");
+    background-size: cover;
+    height: 399px;
 }
 .opacity{
     background-color: black;
@@ -376,4 +386,97 @@ font-weight: bold;
 .img{
     width: 100%;
 }
+}
+.leftpopup
+{
+    background-color: rgb(216, 216, 216);
+    width: 50%;
+    text-align: center;
+    font-size: 40px;
+    position: relative;
+    overflow: hidden;
+}
+.rightpopup
+{
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+}
+.popup
+{
+    flex-wrap:wrap;
+    display: none;
+}
+.rightpopup img
+{
+    width: 100%;
+    height: 100%;
+}
+.leftpopup p
+{
+    margin-left: 100px;
+    width: 70%;
+    font-size: 30px;
+    text-align: center;
+    color: rgb(58, 58, 58);
+}
+.bottom
+{
+    display:flex;
+    height: 100px;
+    background-color: white;
+    width: 100%;
+}
+.bottomleft
+{
+    text-align: center;
+    width: 30%;
+}
+.bottommiddle
+{
+    text-align: center;
+    width: 40%;
+}
+.bottomright
+{
+    text-align: center;
+     width: 30%;
+}
+.bottommiddle img
+{
+    width: 80px;
+    height: 80px;
+}
+.bottomleft img
+{
+    width: 80px;
+    height: 80px;
+}
+.bottomright img
+{
+    width: 80px;
+    height: 80px;
+}
+.bottommiddle:hover
+{
+    animation-name: imgscale;
+    animation-duration: 1s;
+    overflow:hidden ;
+}
+@keyframes imgscale
+{
+    100%{
+        transform:scale(1.2);     
+    }
+}
+@media (max-width: 768px) {
+    .rightpopup
+    {
+        width: 100%;
+    }
+    .leftpopup
+    {
+        width: 100%;
+    }
+
 }
